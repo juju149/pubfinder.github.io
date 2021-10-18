@@ -1,0 +1,43 @@
+.banner{
+    height: 80vh;
+    display: flex;
+    vertical-align: bottom;
+    color: rgba(255, 255, 255, 1);
+}
+.bannerbackground{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.info{
+    margin-top: 180px;
+    margin-left: 100px;
+    overflow: auto;
+    width: 40vw;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
+    height: min-content;
+}
+.banner h2{
+    color: #FAB131;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+.banner h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.banner h3{
+    font-weight: initial;
+    letter-spacing: 1px;
+}
+.bannerimg{
+    height: 60vh;
+    width: 60vh;
+    margin: auto;
+    padding-top: 180px;
+}

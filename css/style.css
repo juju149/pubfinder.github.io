@@ -4,4 +4,17 @@ body{
     color: rgba(255, 255, 255, 1);
     margin: auto;
 }
-  
+
+.button{
+    color: #FAB131;
+    border: 1px solid #FAB131;
+    border-radius: 100px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover{
+    color: white;
+    background-color: #FAB131;
+}

@@ -1,12 +1,14 @@
 .bannersearch{
-    height: 150vh;
+    height: 70vh;
     background-color: wheat;
     text-align: center;
+    padding-top: 150px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .searchbar{
     margin: auto;
-    margin-top: 350px;
     border: none;
     height: 60px;
     width: 600px;
@@ -14,3 +16,9 @@
     border-radius: 200px;
     font-size: 30px;
 }
+#map {
+    height: 600px;
+    width: 80%;
+    margin: auto;
+    border-radius: 100px;
+  }

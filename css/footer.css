@@ -1,0 +1,15 @@
+.footer{
+    background-color: var(--bg-secondary-color);
+    z-index: -1;
+    padding-top: 20px;
+}
+
+.footer ul{
+    padding: 50px;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: 400;
+}

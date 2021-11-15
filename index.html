@@ -2,63 +2,137 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/undraw_refreshing_beverage_td3r.svg">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/undraw_beer_xg5f.svg">
         <title>Pub finder</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/tabbar.css">
         <link rel="stylesheet" href="./css/banner.css">
         <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./css/footer.css">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
         <script src="./index.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9101169145465282"
+        crossorigin="anonymous"></script>
     </head>
 
     <body>
+
+
         <header>
-            <img class="backimg" src="./assets/beercloud.png" alt="">
             <nav>
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-                <img src="./assets/undraw_beer_xg5f.svg" alt="">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <h1 style="color: black;position: fixed;left: 100px;top: 6px;">Pub finder</h1>
-            <!-- ***** Menu Start ***** -->
-            <ul>
-                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                <li class="scroll-to-section"><a href="#about">About</a></li>
-                <li class="scroll-to-section"><a href="#services">Services</a></li>
-                <li class="scroll-to-section"><a href="#portfolio">Projects</a></li>
-                <li class="scroll-to-section"><a href="#blog">Blog</a></li>
-                <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
-                <li class="scroll-to-section"><a href="#contact" class="header_button button">Sign up</a></li>
-            </ul>        
-            <!-- ***** Menu End ***** -->
+                <!-- ***** Logo Start ***** -->
+                <a href="index.html" class="logo">
+                    <img src="./assets/undraw_beer_xg5f.svg" alt="">
+                </a>
+                <!-- ***** Logo End ***** -->
+                <h1 style="color: var(--font-color);position: fixed;left: 100px;top: 6px;">Pub finder</h1>
+                <!-- ***** Menu Start ***** -->
+                <ul>
+                    <li ><a href="#top" class="active">Home</a></li>
+                    <li ><a href="./about.html">About</a></li>
+                    <li ><a href="#services">Services</a></li>
+                    <li ><a href="#portfolio">Projects</a></li>
+                    <li ><a href="#blog">Blog</a></li>
+                    <li ><a href="#contact">Contact</a></li> 
+                    <li ><a href="#search" class="header_button button">Search</a></li>
+                    <li class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                    </div>  
+                </ul>  
+                <!-- ***** Menu End ***** -->
+                <!-- ***** Dark mode slider ***** -->
+                   
             </nav>
         </header>
 
         <div class="banner" id="top">
-            <img class="bannerbackground" src="./assets/background.jpg" alt="">
+            <section class="sticky">
+                <div class="bubbles">
+                    <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                  <div class="bubble"></div>
+                </div>
+            </section>
             <div class="info">
-                <h2>Pub searsher</h2>
+                <h2>Pub finder</h2>
                 <h1>Find the best pub arround you !</h1>
-                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</h3>
+                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h3>
                 <br><br>
                 <a href="#search" class="button banner_button">Start now</a>
             </div>
-            <img class="bannerimg" src="./assets/undraw_beer_xg5f.svg" alt="">
+            
+            <img class="bannerimg" src="./assets/clinking_beer_mugs_1024.gif" alt="">
             
         </div>
-        <div class="bannersearch">
-            <div id="search"></div>
-            <br><br><br><br><br><br>
-            <input  class="searchbar" type="text" placeholder="Search a pub !">
-            <br><br>
-            <div id="map"></div>
+            <div class="bannersearch">
+                <div id="search"></div>
+                <br><br><br><br><br>
+                <input  class="searchbar" type="text" placeholder="Search a pub !">
+                <br><br>
+                <div id="map"></div>
+            </div>
         </div>
-        <div style="height: 400vh;"></div>
 
+         </div>
+            <div class="bannercontact">
+                <form action="action_page.php">
 
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <br>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <br>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                <br>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                
+                  </form>
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li ><a href="./index.html">Home</a></li>
+                <li ><a href="#about" class="active">About</a></li>
+                <li ><a href="#services">Services</a></li>
+                <li ><a href="#portfolio">Projects</a></li>
+                <li><a  href="#blog">Blog</a></li>
+                <li ><a href="#contact">Contact</a></li>
+            </ul> 
+        </div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg66Vuu9K8hfVf2_yca5To_SpdPds0OHA&callback=initMap&v=weekly" async></script>
+        
+        <div class="waveWrapper waveAnimation">
+            <div class="waveWrapperInner bgTop">
+              <div class="wave waveTop" style="background-image: url(./assets/wave-top.png)"></div>
+            </div>
+            <div class="waveWrapperInner bgMiddle">
+              <div class="wave waveMiddle" style="background-image: url(./assets/wave-mid.png)"></div>
+            </div>
+            <div class="waveWrapperInner bgBottom">
+              <div class="wave waveBottom" style="background-image: url(./assets/wave-bot.png)"></div>
+            </div>
+        </div>
+        <div class="bg">
+            <img class="loadingGif" src="./assets/image_processing20210905-12482-b843dt.gif" alt="">
+            <img src="./assets/bg.png" alt="">  
+        </div>
     </body>
 
 </html>

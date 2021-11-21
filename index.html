@@ -37,7 +37,7 @@
                     <li ><a href="#search" class="header_button button">Search</a></li>
                     <li class="theme-switch-wrapper">
                         <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" />
+                            <input type="checkbox" id="checkbox" name="checkbox"/>
                             <div class="slider round"></div>
                         </label>
                     </div>  
@@ -75,9 +75,8 @@
             
         <!-- Banner search pub withe map     -->
         </div>
-            <div class="bannersearch">
-                <div id="search"></div>
-                <br><br><br><br><br>
+            <div class="bannersearch" id="search">
+                <div class="bannertitle">Search a bar</div>
                 <input  class="searchbar" type="text" placeholder="Search a pub !">
                 <br><br>
                 <div id="map"></div>
@@ -87,16 +86,25 @@
         <!-- Banner contact -->
          </div>
             <div class="bannercontact">
+                <div class="bannertitle">Contact us</div>
+                <br><br>
                 <form action="action_page.php">
 
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <br>
+                
                     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
                 <br>
                     <select id="country" name="country">
-                      <option value="australia">Australia</option>
+                      <option value="australia">Australie</option>
                       <option value="canada">Canada</option>
-                      <option value="usa">USA</option>
+                      <option value="usa">Etats-unies</option>
+                      <option value="usa">France</option>
+                      <option value="usa">Angleterre</option>
+                      <option value="usa">Espagne</option>
+                      <option value="usa">Bresil</option>
+                      <option value="usa">Maroc</option>
+                      <option value="usa">Chine</option>
+                      <option value="usa">Japon</option>
                     </select>
                 <br>
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
@@ -109,15 +117,47 @@
         </div>
 
         <div class="footer">
-            <ul>
-                <li ><a href="./index.html">Home</a></li>
-                <li ><a href="#about" class="active">About</a></li>
-                <li ><a href="#services">Services</a></li>
-                <li ><a href="#portfolio">Projects</a></li>
-                <li><a  href="#blog">Blog</a></li>
-                <li ><a href="#contact">Contact</a></li>
-            </ul> 
+            <div class="container">
+                <div class="col1">
+                    <img src="./assets/clinking_beer_mugs_1024.gif" alt="">
+                    <h2>PUBFINDER</h2>
+                </div>
+                <div class="col2">
+                    <h3>OUR SERVICES</h3>
+                    <ul>
+                        <li ><a href="./index.html">Home</a></li>
+                        <li ><a href="./services.html">Services</a></li>
+                        <li ><a href="#portfolio">Projects</a></li>
+                    </ul> 
+                </div>
+                <div class="col3">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li ><a href="./about.html" class="active">About</a></li>
+                        <li><a  href="#blog">Blog</a></li>
+                        <li ><a href="#contact">Contact</a></li>
+                    </ul> 
+                </div>
+                <div class="col4">
+                    <h3>WHERE WE ARE</h3>
+                    <span>34090, Montpellier</span>
+                    <br>
+                    <span>575 Avenu des apothicaires</span>
+                </div>
+            </div>
+
+            <div class="horizontalbar"></div>
+
+            <div class="socialnetwork">
+                <img src="./assets/facebook.png" alt="">
+                <img src="./assets/instagram.png" alt="">
+                <img src="./assets/twitter.png" alt="">
+            </div>
+
+            <div class="copyright">Copyright © 2021. All Rights Reserved</div>
         </div>
+
+        
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg66Vuu9K8hfVf2_yca5To_SpdPds0OHA&callback=initMap&v=weekly" async></script>
         
         <div class=" waveAnimation">

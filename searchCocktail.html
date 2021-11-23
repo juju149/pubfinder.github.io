@@ -10,11 +10,11 @@
         <link rel="stylesheet" href="./css/slider.css">
         <link rel="stylesheet" href="./css/searchCocktail.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <script src="./index.js"></script>
         <script src="./api.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9101169145465282"
         crossorigin="anonymous"></script>
+        <script src="./modal.js"></script>
+        <script src="./index.js"></script>
     </head>
 
     <body>
@@ -30,13 +30,13 @@
                 <h1 style="color: var(--font-color);position: fixed;left: 100px;top: 6px;">Pub finder</h1>
                 <!-- ***** Menu Start ***** -->
                 <ul>
-                    <li ><a href="#top" class="active">Home</a></li>
+                    <li ><a href="./index.html" class="active">Home</a></li>
                     <li ><a href="./about.html">About</a></li>
                     <li ><a href="#services">Services</a></li>
-                    <li ><a href="#portfolio">Cocktails</a></li>
+                    <li ><a href="./searchCocktail.html">Cocktails</a></li>
                     <li ><a href="#blog">Blog</a></li>
                     <li ><a href="#contact">Contact</a></li> 
-                    <li ><a href="#search" class="header_button button">Search</a></li>
+                    <li ><a href="./index.html#search" class="header_button button">Search</a></li>
                     <li class="theme-switch-wrapper">
                         <label class="theme-switch" for="checkbox">
                             <input type="checkbox" id="checkbox" name="checkbox"/>
@@ -50,10 +50,55 @@
             </nav>
         </header>
 
-        <form class="searchCocktail" onsubmit="getVal()">
+        <div class="searchCocktail">
             <input class="searchCocktailBar" type="text" placeholder="Search.." name="search" onblur="getVal()">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+            <button class="searchButton" type="submit"><i class="fa fa-search"></i></button>
+            <br><br>
+            <button class="filterButton" id="myBtn">Filter <i class="fa fa-filter"></i></button>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Filter research</h2>
+                </div>
+
+                <div class="modal-body">
+                    <select id="ingredient" name="ingredient">
+                        <option value="">All</option>
+                        <option value="Ordinary Drink">Ordinary Drink</option>
+                        <option value="Cocktail">Cocktail</option>
+                        <option value="Shot">Shot</option>
+                        <option value="Milk / Float / Shake">Milk / Float / Shake</option>
+                        <option value="Coffee / Tea">Coffee / Tea</option>
+                        <option value="Homemade Liqueur">Homemade Liqueur</option>
+                        <option value="Punch / Party Drink">Punch / Party Drink</option>
+                        <option value="Beer">Beer</option>
+                        <option value="Soft Drink / Soda">Soft Drink / Soda</option>
+                        <option value="Other / Unknown">Other / Unknown</option>
+                    </select>
+                    <span style="float: right;display: flex;justify-content: center;align-items: center;">
+                        <span for="havealcohol">no alcohol ?  &nbsp;</span>
+                        <label class="switch">
+                            <input class="checkbox" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </span>
+                    <div class="modal-footer">
+                        <input type="submit" value="Submit" onclick="applyFilter()">
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+        
+        </div>
+        
 
         <!-- Banner slider -->
         <div class="CSSgal">

@@ -1,16 +1,29 @@
 // Create a request variable and assign a new XMLHttpRequest object to it.
 var request = new XMLHttpRequest();
 
-function openCocktail(name) {
+var lastResearch = ""
+
+function openCocktail(name, categorie, noAlcohol) {
+    var modal = document.getElementById("myModal");
+    modal.style.display = 'none'
+    lastResearch = name
+    if (name == '') {
+        name = lastResearch
+    }
     // Open a new connection, using the GET request on the URL endpoint
     request.open('GET', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='+name, true);
-
     request.onload =  function(){
         document.querySelector('.CSSgal').innerHTML = ""
         // Begin accessing JSON data here
-        var data = JSON.parse(this.response); 
+        var data = JSON.parse(this.response);
         console.log(data);
         var cocktails = data.drinks
+        if (noAlcohol == true) {
+            cocktails = cocktails.filter(cocktail => cocktail.strAlcoholic == "Non_Alcoholic");
+        }
+        if (categorie != "") {
+            cocktails = cocktails.filter(cocktail => cocktail.strCategory == categorie);
+        }
         var bannerSlides = document.querySelector('.CSSgal')
     
         for (let index = 1; index < cocktails.length+1; index++) {
@@ -42,7 +55,7 @@ function openCocktail(name) {
             if (cocktail.strMeasure1 != null) {
                 htmlingredient += '<li>'+cocktail.strMeasure1+' of '+cocktail.strIngredient1+'</li>'
             }
-            if (cocktail.strIngredient != null) {
+            if (cocktail.strMeasure2 != null) {
                 htmlingredient += '<li>'+cocktail.strMeasure2+' of '+cocktail.strIngredient2+'</li>'
             }
             if (cocktail.strMeasure3 != null) {
@@ -85,9 +98,8 @@ function openCocktail(name) {
                  htmlingredient += '<li>'+cocktail.strMeasure15+' of '+cocktail.strIngredient15+'</li>'
             }
     
-            console.log(htmlingredient)
             var slide = document.querySelector('.cocktailSlider')
-            slide.innerHTML += '<div><img class="iconCocktail" src="'+cocktail.strDrinkThumb+'/preview'+'"><h1 class="cocktailTitle">'+cocktail.strDrink+'</h1><div class="cocktailBadge">'+cocktail.strCategory+'  |  '+cocktail.strAlcoholic+'</div><div class="cocktailDescription">'+cocktail.strInstructions+'</div><div class="cocktailIngredient"><ul>'+htmlingredient+'</ul></div></div>'
+            slide.innerHTML += '<div><img class="iconCocktail" src="'+cocktail.strDrinkThumb+''+'"><h1 class="cocktailTitle">'+cocktail.strDrink+'</h1><div class="cocktailBadge">'+cocktail.strCategory+'  |  '+cocktail.strAlcoholic+'</div><div class="cocktailDescription">'+cocktail.strInstructions+'</div><div class="cocktailIngredient"><ul>'+htmlingredient+'</ul></div></div>'
         });
     }
     
@@ -100,13 +112,14 @@ function openCocktail(name) {
 function getVal() {
     const val = document.querySelector('.searchCocktailBar').value;
     console.log(val);
-    openCocktail(val);
+    openCocktail(val, '', '');
 }
 
-function key_down(e) {
-    if(e.keyCode === 13) {
-        getVal();
-    }
-  }
+openCocktail('', '', '');
 
-openCocktail("margarita")
+function applyFilter(){
+    var noAlcohol = document.querySelector('.checkbox').checked
+    console.log(noAlcohol)
+    var categorie = document.querySelector('#ingredient').value
+    openCocktail(lastResearch,categorie,noAlcohol)
+} 

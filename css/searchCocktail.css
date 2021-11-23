@@ -1,0 +1,36 @@
+.searchCocktail{
+    position: fixed;
+    top: 120px;
+    width: 400px;
+    height: 45px;
+    z-index: 9999;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    font-size: 24px;
+}
+
+.searchCocktail > input{
+    float: left;
+    width: 74.5%;
+    border: none !important;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    font-size: 24px;
+    padding-left: 5%;
+}
+
+.searchCocktail > button{
+    float: right;
+    padding: 10px;
+    width: 20%;
+    border: none;
+    height: 104%;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    font-size: 22px;
+}

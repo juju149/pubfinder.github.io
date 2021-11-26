@@ -16,7 +16,7 @@ http://stackoverflow.com/a/34696029/383904
 	white-space: nowrap;
 	font-size: 0;
 	transition: 0.8s;
-    margin-top: 200px;
+    margin-top: 240px;
   
 }
 
@@ -29,8 +29,6 @@ http://stackoverflow.com/a/34696029/383904
 	vertical-align: top;
 	height: 100%;
 	width: 100%;
-	background: none 50% no-repeat;
-	background-size: cover;
 }
 
 /* PREV/NEXT, CONTAINERS & ANCHORS */
@@ -185,42 +183,35 @@ http://stackoverflow.com/a/34696029/383904
 	text-align: center;
     letter-spacing: 0.5px;
 }
-.CSSgal .cocktailSlider h2 {
-	margin-top: 40vh;
-	font-weight: 200;
-	letter-spacing: -0.06em;
-	word-spacing: 0.2em;
-	font-size: 3em;
-}
+
 .CSSgal a {
 	border-radius: 50%;
 	margin: 0 3px;
-	color: rgba(0,0,0,0.8);
+	color: var(--bg-color);
 	text-decoration: none;
 }
 
 .cocktailTitle{
-    display: flex; 
-    padding-top: 34px;
+    display: flex;
     margin-top: 0;
     font-size: 50px;
     margin-bottom: 20px;
 }
 
 .iconCocktail {
-    border-radius: 20%;
+    border-radius: 10%;
     display: flex;
     vertical-align: top;
     align-items: start;
     float: left;
-    padding: 40px;
+    margin-right: 40px;
     margin-left: 200px;
     height: 350px;
 }
 
 .cocktailDescription{
     text-align: left;
-    width: 80%;
+    width: 85%;
     font-size: 16px;
 }
 
@@ -233,6 +224,50 @@ http://stackoverflow.com/a/34696029/383904
 }
 
 .cocktailIngredient{
+    text-align: left;
+    width: 80%;
+    font-size: 16px;
+}
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.beerTitle{
+    display: flex;
+    margin-top: 0;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.iconbeer {
+    border-radius: 20%;
+    display: flex;
+    vertical-align: top;
+    align-items: start;
+    float: left;
+    margin-right: 40px;
+    margin-left: 200px;
+    height: 350px;
+}
+
+.beerDescription{
+    text-align: left;
+    width: 85%;
+    font-size: 16px;
+}
+
+.beerBadge{
+    text-align: left;
+    width: 80%;
+    font-size: 22px;
+    padding-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.beerIngredient{
     text-align: left;
     width: 80%;
     font-size: 16px;

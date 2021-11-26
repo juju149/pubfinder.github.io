@@ -7,7 +7,7 @@
   --bg-color: #ffffff;
   --bg-secondary-color: #fafafa;
   --heading-color: #292922;
-  --wave-invert-color: invert(0%);
+  --wave-invert-color: invert(5%);
 }
 
 /* CSS variable for dark mode */
@@ -19,7 +19,7 @@
   --bg-color: #2c2c2c;
   --bg-secondary-color: #393939;
   --heading-color: #818cab;
-  --wave-invert-color: invert(80%);
+  --wave-invert-color: invert(75%);
 }
 
 *{
@@ -53,6 +53,7 @@ h1, h2, H3, h4, h5, h6, span, div{
   font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
 }
 
 
@@ -100,6 +101,7 @@ h1, h2, H3, h4, h5, h6, span, div{
   }
   .waveTop {
     background-size: 50% 100px;
+    filter: invert(20%);
   }
   .waveAnimation .waveTop {
   animation: move-wave 8s;
@@ -109,12 +111,14 @@ h1, h2, H3, h4, h5, h6, span, div{
   }
   .waveMiddle {
     background-size: 50% 120px;
+    filter: invert(10%);
   }
   .waveAnimation .waveMiddle {
     animation: move_wave 8s linear infinite;
   }
   .waveBottom {
     background-size: 50% 100px;
+    filter: invert(0%);
   }
   .waveAnimation .waveBottom {
     animation: move_wave 12s linear infinite;

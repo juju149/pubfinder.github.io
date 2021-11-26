@@ -1,11 +1,14 @@
 let map, infoWindow;
 
+var isLocalize = false
+
 function initMap() {
   infoWindow = new google.maps.InfoWindow();
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          isLocalize == true
           const pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
@@ -20,7 +23,7 @@ function initMap() {
             position: { lat: position.coords.latitude, lng: position.coords.longitude },
             map: map,
           });
-        }
+        },
       );
     }
 }

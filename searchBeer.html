@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./css/slider.css">
         <link rel="stylesheet" href="./css/searchCocktail.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="./apiCocktails.js"></script>
+        <script src="./apiBeers.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9101169145465282"
         crossorigin="anonymous"></script>
         <script src="./modal.js"></script>
@@ -33,8 +33,8 @@
                     <li ><a href="./home.html">Home</a></li>
                     <li ><a href="./about.html">About</a></li>
                     <li ><a href="#services">Services</a></li>
-                    <li ><a href="./searchCocktail.html" class="active">Cocktails</a></li>
-                    <li ><a href="./searchBeer.html">Beer</a></li>
+                    <li ><a href="./searchCocktail.html">Cocktails</a></li>
+                    <li ><a href="#top" class="active">Beer</a></li>
                     <li ><a href="#contact">Contact</a></li> 
                     <li ><a href="./index.html#search" class="header_button button">Search</a></li>
                     <li class="theme-switch-wrapper">
@@ -51,7 +51,7 @@
         </header>
 
         <div class="searchCocktail">
-            <input class="searchCocktailBar" type="text" placeholder="Search.." name="search" onblur="getCocktailVal()">
+            <input class="searchBeerBar" type="text" placeholder="Search.." name="search" onblur="getBeerVal()">
             <button class="searchButton" type="submit"><i class="fa fa-search"></i></button>
             <br><br>
             <button class="filterButton" id="myBtn">Filter <i class="fa fa-filter"></i></button>
@@ -84,14 +84,11 @@
                         <option value="Other / Unknown">Other / Unknown</option>
                     </select>
                     <span style="float: right;display: flex;justify-content: center;align-items: center;">
-                        <span for="havealcohol">no alcohol ?  &nbsp;</span>
-                        <label class="switch">
-                            <input class="checkbox" type="checkbox">
-                            <span class="filterSlider round"></span>
-                        </label>
+                        <input id="slider" name="slider" type="range" value=0>
                     </span>
+                    
                     <div class="modal-footer">
-                        <input type="submit" value="Submit" onclick="applyCocktailFilter()">
+                        <input type="submit" value="Submit" onclick="applyBeerFilter()">
                     </div>
                     
                 </div>
